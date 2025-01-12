@@ -22,7 +22,6 @@ class Buffer {
 
     evalOperation(){
         if(!this.operator) return
-        console.log(`${this.evalBuffer()} ${this.operator} ${this.accumulator}`)
         this.buffer = (eval(`${this.accumulator} ${this.operator} ${this.evalBuffer()}`)).toString().split("").slice();
         this.operator = null;
         this.vestigial = true;
@@ -31,7 +30,7 @@ class Buffer {
 
     evalBuffer(){
         if (this.buffer.length > 0){
-            return parseInt(this.buffer.join(""));
+            return parseFloat(this.buffer.join(""));
         }
         return 0
     }
