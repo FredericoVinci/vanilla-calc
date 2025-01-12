@@ -1,0 +1,33 @@
+body{
+    background: wheat;
+    
+}
+
+main{
+    background: teal;
+    margin: 0 auto;
+    width: max-content;
+}
+
+#display{
+    height: 40px;
+    background-color: aquamarine;
+    font-size: 22px;
+    text-align: right;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    padding: 3px;
+}
+button{
+    font-size: 22px;
+    padding: 5px 8px;
+}
+.double{
+    grid-column: span 2;
+    
+}
